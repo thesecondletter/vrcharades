@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,19 +51,22 @@
             border: none;
             padding: 15px;
             font-size: 1.2rem;
-            cursor: not-allowed; /* Disable clicking */
             border-radius: 10px;
             transition: background-color 0.3s ease;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
             opacity: 0.5; /* Visually show the buttons are inactive */
         }
 
-            button:hover {
-                background-color: #ff4b4b;
-            }
+        button:hover:enabled {
+            background-color: #ff4b4b;
+        }
 
         #word-display {
             font-size: 1.8rem;
@@ -86,19 +89,14 @@
         <p>Categories are coming soon. Stay tuned!</p>
 
         <div class="categories">
-            <button>🎬 Movies & TV Shows</button>
-            <button>🌍 Geography</button>
-            <button>⚽️ Sports & Activities</button>
+            <button onclick="window.location.href='https://thesecondletter.github.io/charades-moviesandshows/'">🎬 Movies & TV Shows</button>
+            <button disabled>🌍 Geography</button>
+            <button disabled>⚽️ Sports & Activities</button>
         </div>
 
         <p id="word-display"></p>
         <p id="timer"></p>
     </div>
-
-    <script>
-        // For now, the buttons don't do anything since they are disabled.
-        // You can add functionality to these buttons later.
-    </script>
 
 </body>
 </html>
